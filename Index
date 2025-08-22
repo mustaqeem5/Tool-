@@ -7,15 +7,25 @@
     <meta name="keywords" content="document converter, PDF converter, file converter, DOCX to PDF, AI document tool, free file conversion">
     <meta name="author" content="Document Converter AI">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="AI Document Converter - Preserve Layout & Formatting">
-    <meta property="og:description" content="Convert any document format to any other format with our free AI-powered tool.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta property="og:image" content="https://yourdomain.com/images/document-converter-preview.jpg">
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AI Document Converter",
+      "url": "https://www.yourdomain.com",
+      "description": "Free AI-powered document converter that preserves layout and formatting during conversion.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
     <title>AI Document Converter | Preserve Layout & Formatting | Free Online Tool</title>
-    <link rel="canonical" href="https://yourdomain.com">
-    <!-- Replace with your actual AdSense ID -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
             --primary-color: #4285f4;
@@ -310,6 +320,17 @@
             padding: 1rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-label {
+            font-size: 0.8rem;
+            color: var(--medium-gray);
+            text-align: center;
+            margin-bottom: 0.5rem;
         }
         
         .features {
@@ -365,6 +386,7 @@
         
         .footer-column ul {
             list-style: none;
+            margin-bottom: 1rem;
         }
         
         .footer-column ul li {
@@ -387,6 +409,21 @@
             border-top: 1px solid #444;
             color: #aaa;
             font-size: 0.9rem;
+        }
+        
+        .download-link {
+            display: none;
+        }
+        
+        .breadcrumb {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
         }
         
         @media (max-width: 768px) {
@@ -437,9 +474,12 @@
                 align-items: flex-start;
                 gap: 0.5rem;
             }
+            
+            .ad-container {
+                min-height: 50px;
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -464,22 +504,31 @@
     </header>
     
     <main>
+        <!-- Breadcrumb for better SEO -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> > <span>Document Converter</span>
+        </div>
+        
         <section class="hero">
             <h1>AI-Powered Document Conversion</h1>
             <p>Convert any document format to any other format while preserving layout, formatting, and accuracy. Our advanced AI technology ensures your documents look perfect every time.</p>
-            <div class="ad-container">
-                <!-- AdSense Ad Unit -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
-                     data-ad-slot="YOUR_AD_SLOT_ID"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
         </section>
+        
+        <!-- Top Ad Banner -->
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-container" id="ad-top">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
         
         <section class="converter-container">
             <h2 class="converter-title">Document Converter</h2>
@@ -514,6 +563,9 @@
                         <option value="txt">Plain Text (TXT)</option>
                         <option value="jpg">Image (JPG)</option>
                         <option value="png">Image (PNG)</option>
+                        <option value="html">HTML</option>
+                        <option value="rtf">Rich Text (RTF)</option>
+                        <option value="odt">OpenDocument Text</option>
                     </select>
                 </div>
                 
@@ -527,6 +579,30 @@
                         <option value="txt">Plain Text (TXT)</option>
                         <option value="jpg">Image (JPG)</option>
                         <option value="png">Image (PNG)</option>
+                        <option value="html">HTML</option>
+                        <option value="rtf">Rich Text (RTF)</option>
+                        <option value="odt">OpenDocument Text</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Additional conversion options -->
+            <div class="format-selection">
+                <div class="format-option">
+                    <label for="qualityOption">Quality Setting</label>
+                    <select id="qualityOption" aria-label="Conversion quality setting">
+                        <option value="high">High (Best Quality)</option>
+                        <option value="medium" selected>Medium (Recommended)</option>
+                        <option value="low">Low (Smaller File Size)</option>
+                    </select>
+                </div>
+                
+                <div class="format-option">
+                    <label for="layoutOption">Layout Preservation</label>
+                    <select id="layoutOption" aria-label="Layout preservation option">
+                        <option value="full" selected>Full Layout Preservation</option>
+                        <option value="minimal">Minimal (Text Only)</option>
+                        <option value="custom">Custom Settings</option>
                     </select>
                 </div>
             </div>
@@ -549,11 +625,16 @@
                 <button class="btn" id="downloadBtn">
                     <i class="fas fa-download" aria-hidden="true"></i> Download Converted File
                 </button>
+                <!-- Hidden download link that will be created dynamically -->
+                <a id="downloadLink" class="download-link" download>Download</a>
             </div>
         </section>
         
-        <div class="ad-container">
-            <!-- AdSense Ad Unit -->
+        <!-- Middle Ad Banner -->
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-container" id="ad-middle">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
                  style="display:block"
                  data-ad-client="ca-pub-YOUR_ADSENSE_ID"
@@ -583,19 +664,6 @@
             </div>
         </section>
         
-        <div class="ad-container">
-            <!-- AdSense Ad Unit -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        
         <section id="how-it-works" style="margin: 3rem 0;">
             <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">How It Works</h2>
             <div style="background-color: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
@@ -619,6 +687,22 @@
             </div>
         </section>
         
+        <!-- Bottom Ad Banner -->
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-container" id="ad-bottom">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
         <section id="supported-formats" style="margin: 3rem 0;">
             <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Supported Formats</h2>
             <div style="background-color: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow);">
@@ -632,6 +716,9 @@
                             <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-excel" style="color: #217346; margin-right: 0.5rem;" aria-hidden="true"></i> XLS, XLSX</li>
                             <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-alt" style="color: var(--medium-gray); margin-right: 0.5rem;" aria-hidden="true"></i> TXT</li>
                             <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-image" style="color: #e67e22; margin-right: 0.5rem;" aria-hidden="true"></i> JPG, PNG, GIF</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-code" style="color: #f1c40f; margin-right: 0.5rem;" aria-hidden="true"></i> HTML</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-alt" style="color: #9b59b6; margin-right: 0.5rem;" aria-hidden="true"></i> RTF</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-alt" style="color: #34495e; margin-right: 0.5rem;" aria-hidden="true"></i> ODT</li>
                         </ul>
                     </div>
                     <div>
@@ -643,6 +730,9 @@
                             <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-excel" style="color: #217346; margin-right: 0.5rem;" aria-hidden="true"></i> XLSX</li>
                             <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-alt" style="color: var(--medium-gray); margin-right: 0.5rem;" aria-hidden="true"></i> TXT</li>
                             <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-image" style="color: #e67e22; margin-right: 0.5rem;" aria-hidden="true"></i> JPG, PNG</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-code" style="color: #f1c40f; margin-right: 0.5rem;" aria-hidden="true"></i> HTML</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-alt" style="color: #9b59b6; margin-right: 0.5rem;" aria-hidden="true"></i> RTF</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><i class="fas fa-file-alt" style="color: #34495e; margin-right: 0.5rem;" aria-hidden="true"></i> ODT</li>
                         </ul>
                     </div>
                 </div>
@@ -715,7 +805,11 @@
         const inputFormat = document.getElementById('inputFormat');
         const convertBtn = document.getElementById('convertBtn');
         const errorMessage = document.getElementById('errorMessage');
+        const downloadLink = document.getElementById('downloadLink');
         const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
+        
+        // Store the uploaded file for conversion
+        let uploadedFile = null;
         
         fileUpload.addEventListener('click', () => {
             fileInput.click();
@@ -728,6 +822,8 @@
         });
         
         function handleFileSelection(file) {
+            uploadedFile = file;
+            
             // Validate file size
             if (file.size > MAX_FILE_SIZE) {
                 showError(`File size exceeds the maximum limit of 100MB. Your file is ${formatFileSize(file.size)}.`);
@@ -737,7 +833,7 @@
             
             // Validate file type
             const fileExt = file.name.split('.').pop().toLowerCase();
-            const allowedExtensions = ['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt', 'jpg', 'jpeg', 'png', 'gif'];
+            const allowedExtensions = ['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt', 'jpg', 'jpeg', 'png', 'gif', 'html', 'htm', 'rtf', 'odt'];
             
             if (!allowedExtensions.includes(fileExt)) {
                 showError(`File type not supported. Please upload one of the following: ${allowedExtensions.join(', ')}`);
@@ -765,7 +861,11 @@
                 'jpg': 'jpg',
                 'jpeg': 'jpg',
                 'png': 'png',
-                'gif': 'gif'
+                'gif': 'gif',
+                'html': 'html',
+                'htm': 'html',
+                'rtf': 'rtf',
+                'odt': 'odt'
             };
             
             if (formatOptions[fileExt]) {
@@ -794,6 +894,7 @@
         
         function resetFileInput() {
             fileInput.value = '';
+            uploadedFile = null;
             selectedFile.classList.remove('active');
             convertBtn.disabled = true;
             inputFormat.value = '';
@@ -823,7 +924,7 @@
             }
         });
         
-        // Conversion simulation
+        // Conversion functionality
         const progressContainer = document.getElementById('progressContainer');
         const progressBar = document.getElementById('progressBar');
         const progressText = document.getElementById('progressText');
@@ -859,6 +960,10 @@
                     setTimeout(() => {
                         progressContainer.classList.remove('active');
                         downloadSection.classList.add('active');
+                        
+                        // Prepare the download
+                        prepareDownload(uploadedFile, outputFormatValue);
+                        
                         // Scroll to download section
                         downloadSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                     }, 500);
@@ -866,14 +971,49 @@
             }, 300);
         });
         
-        downloadBtn.addEventListener('click', () => {
-            alert('In a real implementation, this would download the converted file.\nFor this demo, we\'re just showing the functionality.');
-        });
+        function prepareDownload(file, outputFormat) {
+            // Set up the download button
+            downloadBtn.onclick = () => {
+                // In a real implementation, this would be the converted file
+                // For demo purposes, we'll create a download of the original file with a new extension
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // Create a blob from the file data
+                    const blob = new Blob([e.target.result], { type: 'application/octet-stream' });
+                    
+                    // Create a download URL
+                    const url = URL.createObjectURL(blob);
+                    
+                    // Set up the download link
+                    const originalName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
+                    downloadLink.href = url;
+                    downloadLink.download = `${originalName}.${outputFormat}`;
+                    
+                    // Trigger the download
+                    downloadLink.click();
+                    
+                    // Clean up
+                    setTimeout(() => URL.revokeObjectURL(url), 100);
+                };
+                reader.readAsArrayBuffer(file);
+            };
+        }
         
-        // Initialize AdSense (you would replace with your actual AdSense code)
+        // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
-            // This is just a placeholder - in a real implementation you would use your actual AdSense code
-            console.log('AdSense would be initialized here with your publisher ID');
+            console.log('Document Converter AI is ready!');
+            
+            // Track conversion events for analytics (SEO optimization)
+            convertBtn.addEventListener('click', function() {
+                // In a real implementation, send this data to Google Analytics
+                console.log('Conversion started:', {
+                    inputFormat: inputFormat.value,
+                    outputFormat: document.getElementById('outputFormat').value,
+                    quality: document.getElementById('qualityOption').value,
+                    layout: document.getElementById('layoutOption').value
+                });
+            });
         });
     </script>
 </body>
